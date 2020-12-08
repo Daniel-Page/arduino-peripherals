@@ -1,6 +1,6 @@
 # HITLAB | Broomstick Controller  
 
-## Ojects Classes  
+## Object Classes  
 
 
 
@@ -52,11 +52,15 @@ pot name(pin, INPUT, ADC bits, device voltage);
 ## Variadic Functions  
 
 ### Active High <-> Active Low  
+```
 invertTrigger(number of addresses, &button1, &button2,...);  
+```
 
 ### Update Button States  
 ```
 pollInputs(number of addresses, &button1, &button2,...);  
 ```
 ### Convert States to a Number  
+```
 int state = statesToNumber(number of addresses, &button1, &button2,...);  
+```
