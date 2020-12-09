@@ -1,5 +1,9 @@
 # HITLAB | Broomstick Controller  
 
+
+<img src="setup.jpg" height="400">  
+
+
 ## Object Classes  
 
 
