@@ -11,11 +11,11 @@ led name(pin, OUTPUT);
 ```
 
 #### Methods  
-- void on();  
-- void off();  
+- `void on();`  
+- `void off();`  
 
 #### Variable  
-- int pinAdr;  
+- `int pinAdr;`  
 
 
 
@@ -26,12 +26,12 @@ button name(pin, INPUT_PULLUP);
 ```
 
 #### Methods  
-- void invert();  
-- void poll();  
-- bool getState();  
+- `void invert();`    
+- `void poll();`  
+- `bool getState();`    
 
 #### Variable  
-- int pinAdr;  
+- `int pinAdr;`  
 
 
 
@@ -42,10 +42,10 @@ pot name(pin, INPUT, ADC bits, device voltage);
 ```
 
 #### Method  
-- float getVoltage();  
+- `float getVoltage();`  
 
 #### Variable  
-- int pinAdr;  
+- `int pinAdr;`  
 
 
 
