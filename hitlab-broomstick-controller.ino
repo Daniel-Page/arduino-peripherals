@@ -5,7 +5,7 @@
 
 
 #include "io.h"
-#include "defs.h"
+#include "defs.h" // Must be last include
 
 
 // Class object initialisations
@@ -15,9 +15,11 @@ button RedButton(RED_BUT_PIN_ADR, INPUT_PULLUP);
 button BlueButton(BLUE_BUT_PIN_ADR, INPUT_PULLUP);
 pot Pot(POT_PIN_ADR, INPUT, ADC_BITS, VCC);
 
+msg Message;
+
 
 void setup() {
-  Serial.begin(9600);
+  Message.init(); // Has to be in setup
   invertTrigger(2, &RedButton, &BlueButton); // Swaps between active high and active low
 }
 
@@ -36,13 +38,10 @@ void loop() {
   } else {
     BlueLED.off();
   }
-  
-  int state = statesToNumber(2, &RedButton, &BlueButton); // Converts all possible input states into a unique number
-  Serial.print("state,");
-  Serial.println(state);
 
-  Serial.print("pot,");
-  Serial.println(Pot.getVoltage());
-  
+  Message.stageBut(2, &RedButton, &BlueButton); // Converts all possible input states into a unique number
+  Message.stagePot(1, &Pot);
+  Message.transmit(); // Send message via serial and reset
+
   delay(10);
 }

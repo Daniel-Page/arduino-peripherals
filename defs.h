@@ -1,5 +1,5 @@
-#ifndef PINS_H
-#define PINS_H
+#ifndef DEFS_H
+#define DEFS_H
 
 
 #define ADC_BITS         1023

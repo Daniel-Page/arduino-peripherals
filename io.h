@@ -39,13 +39,24 @@ class pot : io {
 };
 
 
+class msg : io {
+  public:
+    void init();
+    void stageBut(int num, ...);
+    void stagePot(int num, ...);
+    void transmit();
+  private:
+    String messageString;
+};
+
+
 void invertTrigger(int num, ...);
 
 
 void pollInputs(int num, ...);
 
 
-int statesToNumber(int num, ...);
+int stageBut(int num, ...);
 
 
 #endif
