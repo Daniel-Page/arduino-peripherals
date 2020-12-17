@@ -5,6 +5,7 @@
 
 
 #include "io.h"
+#include "msg.h"
 #include "defs.h" // Must be last include
 
 
@@ -41,7 +42,5 @@ void loop() {
 
   Message.stageBut(2, &RedButton, &BlueButton); // Converts all possible input states into a unique number
   Message.stagePot(1, &Pot);
-  Message.transmit(); // Send message via serial and reset
-
-  delay(10);
+  Message.transmit(); // Send composed message via serial and reset buffer
 }
