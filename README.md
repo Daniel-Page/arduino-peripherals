@@ -1,11 +1,11 @@
 # HITLAB | Broomstick Controller  
+Developed by Daniel Page  
 
 
 <img src="setup.jpg" height="400">  
 
 
 ## Object Classes  
-
 
 
 ### LED  
@@ -53,6 +53,22 @@ pot name(pin, INPUT, ADC bits, device voltage);
 
 
 
+### Messenger  
+```
+msg name;
+```
+
+#### Method  
+- `void init();`
+- `void stageBut(int num, ...);`
+- `void stagePot(int num, ...);`
+- `void transmit();`
+
+### Variable  
+- `String messageString;`
+
+
+
 ## Variadic Functions  
 
 ### Active High <-> Active Low  
@@ -60,11 +76,10 @@ pot name(pin, INPUT, ADC bits, device voltage);
 invertTrigger(number of addresses, &button1, &button2,...);  
 ```
 
+
+
 ### Update Button States  
+Polling occurs before checking because the sending mechanism needs all of the information on states stored as variables to send it all at once.  
 ```
 pollInputs(number of addresses, &button1, &button2,...);  
-```
-### Convert States to a Number  
-```
-int state = statesToNumber(number of addresses, &button1, &button2,...);  
 ```
