@@ -1,6 +1,5 @@
 /* 
- *  Broomstick VR Experience Project
- *  HIT Lab NZ
+ *  Flying Broomstick Simulation Arduino Controller
  */
 
 
