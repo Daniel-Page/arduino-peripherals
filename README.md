@@ -1,6 +1,4 @@
-# HITLAB | Broomstick Controller  
-Developed by Daniel Page  
-
+# Flying Broomstick Simulation Arduino Controller  
 
 <img src="setup.jpg" height="400">  
 
