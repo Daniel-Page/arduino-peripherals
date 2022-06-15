@@ -1,5 +1,5 @@
 /* 
- *  Flying Broomstick Simulation Arduino Controller
+ *  Arduino Peripherals
  */
 
 
