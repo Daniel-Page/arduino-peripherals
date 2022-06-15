@@ -1,4 +1,4 @@
-# Flying Broomstick Simulation Arduino Controller  
+# Arduino Peripherals
 
 <img src="setup.jpg" height="400">  
 
